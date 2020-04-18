@@ -1,7 +1,8 @@
 ### Impostazioni Geany per Linux e C++ ###
 - In ```Modifica/Preferenze/Scorciatoie da tastiera```
   -  Elimina shortcut per chiudi.
-  - Cancella riga corrente: ```<Primary>e```.
+  - Duplica riga corrente: ```<Primary>e``` 
+  - Cancella riga corrente: ```<Primary>d```.
   - Sposta riga(e) su: ```<Primary>Up```.
   - Sposta riga(e) già:```<Primary>Down```.
   - Commenta/decommenta riga ```<Primary>q```.
