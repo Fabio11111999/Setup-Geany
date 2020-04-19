@@ -1,3 +1,4 @@
+#pragma GCC optimize("O3")
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -36,3 +37,6 @@ template<typename T> void maxself(T &a, T &b){
 	a=max(a,b);
 }
 // End Template IO/Utility
+int main(){
+	cin.tie(0),cin.sync_with_stdio(0),cout.tie(0),cout.sync_with_stdio(0);
+}
