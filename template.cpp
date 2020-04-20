@@ -70,6 +70,36 @@ int bin(int n, int k, int mod){
 	return (__fact[n]*inv(den,mod))%mod;
 }
 
+//Prime Factorization
+bool not_prime[MAX_PRIME];
+int least[MAX_PRIME];
+void crivello(int N){
+	for(int i=2;i<=N;i++){
+		if(not_prime[i])
+			continue;
+		for(int times=2;i*times<=N;times++){
+			if(!not_prime[i*times]){
+				not_prime[i*times]=true;
+				least[i*times]=i;
+			}
+		}
+	}
+}
+vector<int> factors(int X, bool diff){
+	vector<int> res;
+	if(least[X]!=0){
+		res.push_back(least[X]);
+		X/=least[X];
+	}
+	while(least[X]!=0){
+		if(!diff  || least[X]!=res.back())
+			res.push_back(least[X]);
+		X/=least[X];
+	}
+	res.push_back(X);
+	return res;
+}
+
 // End Template 
 
 
